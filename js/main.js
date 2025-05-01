@@ -59,7 +59,7 @@ document.addEventListener("click", spinThatWheel);
  * Start spinning the wheel
  */
 function spinThatWheel() {
-    spin(98 + Math.random() * 4, 1, undefined);
+    spin(99 + Math.random() * 2, 1, undefined);
 }
 
 /**
@@ -98,7 +98,7 @@ function spin(count, delay, previous) {
         delay = 1000 + Math.random() * 1000;
     }
     else {
-        delay *= 1.064 + Math.random() * 0.002;
+        delay *= 1.065 + Math.random() * 0.001;
     }
     // Decrease the count, since we just showed one
     count--;

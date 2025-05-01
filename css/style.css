@@ -1,0 +1,21 @@
+/*********************************************
+
+Here is a description of any special CSS used.
+By default that's nothing.
+
+**********************************************/
+
+body {
+    overflow: none;
+    background-color: black;
+}
+
+#prompt {
+    font-family: 'Courier New', Courier, monospace;
+    color: green;
+    font-size: 5em;
+    /* font-weight: 800; */
+    padding-left: 10vw;
+    padding-top: 10vw;
+    width: 80vw;
+}

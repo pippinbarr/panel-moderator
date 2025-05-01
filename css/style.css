@@ -13,9 +13,13 @@ body {
 #prompt {
     font-family: 'Courier New', Courier, monospace;
     color: green;
-    font-size: 5em;
+    font-size: 4em;
     /* font-weight: 800; */
     padding-left: 10vw;
     padding-top: 10vw;
     width: 80vw;
+}
+
+#number {
+    font-weight: 800;
 }

@@ -12,9 +12,9 @@ body {
 
 #prompt {
     font-family: 'Courier New', Courier, monospace;
-    color: green;
+    color: yellow;
     font-size: 4em;
-    /* font-weight: 800; */
+    font-weight: 800;
     padding-left: 10vw;
     padding-top: 10vw;
     width: 80vw;

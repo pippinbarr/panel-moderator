@@ -69,8 +69,6 @@ function spinThatWheel() {
  * show the same thing twice;
  */
 function spin(count, delay, previous) {
-    console.log(count);
-
     // Choose the next item to show
     let next;
     do {
@@ -78,7 +76,8 @@ function spin(count, delay, previous) {
     } while (next === previous);
 
     // Show it
-    number.innerText = manifesto.indexOf(next) + 1 + ". ";
+    const index = manifesto.indexOf(next);
+    number.innerText = index + 1 + ". ";
     item.innerText = next;
     // Remember it for the next spin to avoid repetition
     previous = next;
@@ -107,10 +106,18 @@ function spin(count, delay, previous) {
     // Decrease the count, since we just showed one
     count -= 1;
 
-    // Schedule the next ticking into place
-    setTimeout(() => {
-        spin(count, delay, previous);
-    }, delay);
+    // If we've hit the end, then splice this one out
+    if (count === 0) {
+        manifesto.splice(index, 1);
+
+        console.log(manifesto.length);
+    }
+    else {
+        // Schedule the next ticking into place
+        setTimeout(() => {
+            spin(count, delay, previous);
+        }, delay);
+    }
 }
 
 /**
